@@ -13,7 +13,7 @@ function App() {
 
   return (
     <CartProvider>
-          <HashRouter basename="/my-store">
+          <HashRouter>
           <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
