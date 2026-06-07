@@ -6,8 +6,11 @@ function ProductDetail(){
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const { id } = useParams();
-    const { addToCart, getQuantity } = useCart();
+    const { addToCart, getQuantity, cart } = useCart();
     const quantityInCart = getQuantity(Number(id));
+
+    console.log('url id:', Number(id), typeof Number(id));
+console.log('cart:', cart);
     useEffect( () => {
         fetch(`https://fakestoreapi.com/products/${id}`)
         .then(res => res.json())
