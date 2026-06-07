@@ -5,6 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/my-store/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my-store</title>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const path = params.get('path');
+      if (path) {
+        window.history.replaceState(null, '', path);
+      }
+    </script>
     <script type="module" crossorigin src="/my-store/assets/index-BCyPf89v.js"></script>
     <link rel="stylesheet" crossorigin href="/my-store/assets/index-0Xt1KbEl.css">
   </head>
