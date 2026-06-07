@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import { CartProvider  } from "./context/CartContext";
 import Navbar from "./components/Navbar";
 import Home from './pages/Home';
@@ -13,14 +13,14 @@ function App() {
 
   return (
     <CartProvider>
-          <BrowserRouter basename="/my-store">
+          <HashRouter basename="/my-store">
           <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
             </Routes>     
-        </BrowserRouter>  
+        </HashRouter>  
     </CartProvider>         
   )
 }
